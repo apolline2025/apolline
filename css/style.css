@@ -10056,3 +10056,38 @@ textarea.form-control {
     transition: none !important;
   }
 }
+
+/* ===== CATEGORY SECTION MOBILE FIX ===== */
+@media (max-width: 768px) {
+  .ftco-category .category-wrap-2 {
+    height: 200px !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+  .ftco-category .category-wrap-2 .text {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: rgba(0,0,0,0.5) !important;
+    padding: 10px !important;
+    width: 100% !important;
+  }
+  .ftco-category .category-wrap-2 .text h2 {
+    color: #fff !important;
+    font-size: 18px !important;
+    margin: 0 !important;
+  }
+  .ftco-category .category-wrap-2 .text p {
+    color: #fff !important;
+    font-size: 12px !important;
+    margin: 0 !important;
+  }
+  .ftco-category .category-wrap {
+    height: 200px !important;
+  }
+  .ftco-category .img {
+    background-size: cover !important;
+    background-position: center !important;
+  }
+}
