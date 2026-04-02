@@ -1,6 +1,7 @@
  AOS.init({
  	duration: 800,
- 	easing: 'slide'
+ 	easing: 'slide',
+ 	disable: 'mobile'
  });
 
 (function($) {

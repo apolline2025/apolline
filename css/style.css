@@ -10041,3 +10041,18 @@ textarea.form-control {
     height: 450px !important;
   }
 }
+
+/* ===== MOBILE ANIMATION FIX ===== */
+@media (max-width: 768px) {
+  .ftco-animate {
+    opacity: 1 !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+  }
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+    transition: none !important;
+  }
+}
