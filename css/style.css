@@ -8358,7 +8358,8 @@ h1, h2, h3, h4, h5,
   .owl-carousel.home-slider {
     position: relative;
     height: 650px;
-    z-index: 0; }
+    z-index: 0;
+    touch-action: pan-y !important; }
     .owl-carousel.home-slider .slider-item {
       background-size: cover;
       background-repeat: no-repeat;
@@ -10011,3 +10012,32 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+/* ===== MOBILE SCROLL FIX ===== */
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    height: auto !important;
+  }
+  #home-section,
+  .hero,
+  .owl-carousel,
+  .owl-carousel.home-slider,
+  .owl-stage-outer,
+  .owl-stage,
+  .owl-item,
+  .slider-item {
+    touch-action: pan-y !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  .owl-carousel.home-slider {
+    height: 450px !important;
+  }
+  .owl-carousel.home-slider .slider-item {
+    height: 450px !important;
+  }
+  .owl-carousel.home-slider .slider-item .slider-text {
+    height: 450px !important;
+  }
+}
