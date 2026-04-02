@@ -10145,3 +10145,36 @@ textarea.form-control {
   .ftco-category .col-md-8, .ftco-category .col-md-4 { width: 100% !important; }
   .ftco-category .col-md-6 { width: 50% !important; float: left !important; }
 }
+
+/* ===== FORCE ALL CONTENT VISIBLE ON MOBILE ===== */
+@media (max-width: 991px) {
+  .ftco-animate,
+  .ftco-animate.fadeIn,
+  .ftco-animate.fadeInUp,
+  .ftco-animate.fadeInLeft,
+  .ftco-animate.fadeInRight {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+    -webkit-transform: translateY(0) !important;
+    animation: none !important;
+    -webkit-animation: none !important;
+    transition: none !important;
+  }
+  .product {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  .img-prod {
+    display: block !important;
+    opacity: 1 !important;
+  }
+  .img-prod img {
+    display: block !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    height: 180px !important;
+    object-fit: cover !important;
+  }
+}
