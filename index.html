@@ -485,6 +485,27 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+  <script>
+  // Fix: allow vertical scroll while keeping horizontal swipe for slider
+  (function(){
+    var startX, startY;
+    var slider = document.querySelector('#home-section');
+    if(!slider) return;
+    slider.addEventListener('touchstart', function(e){
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+    }, {passive: true});
+    slider.addEventListener('touchmove', function(e){
+      if(!startX || !startY) return;
+      var diffX = Math.abs(e.touches[0].clientX - startX);
+      var diffY = Math.abs(e.touches[0].clientY - startY);
+      // If scrolling more vertically than horizontally, allow page scroll
+      if(diffY > diffX) {
+        e.stopPropagation();
+      }
+    }, {passive: false});
+  })();
+  </script>
     
   </body>
 </html>
